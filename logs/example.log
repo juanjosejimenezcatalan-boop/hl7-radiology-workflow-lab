@@ -1,0 +1,6 @@
+2026-11-07T09:00:00Z INFO MLLP receiver started host=0.0.0.0 port=2575
+2026-11-07T09:00:01Z INFO ACCEPTED type=ADT^A04 control_id=ADT-001 reason=-
+2026-11-07T09:05:00Z INFO ACCEPTED type=ORM^O01 control_id=ORM-001 reason=-
+2026-11-07T10:00:00Z INFO ACCEPTED type=ORU^R01 control_id=ORU-001 reason=-
+2026-11-07T10:05:00Z INFO REJECTED type=ADT^A04 control_id=ADT-INVALID-001 reason=Missing PID-3 PatientID
+
