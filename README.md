@@ -36,7 +36,9 @@ message persistence, and operational monitoring.
 
 ## Run with Docker
 
-The receiver publishes host port `2576` and listens on `2575` inside Docker.
+The receiver publishes host port `2576` only on `127.0.0.1` and listens on
+`2575` inside Docker. It is therefore intentionally unavailable to other
+machines on the local network.
 
 ```sh
 docker compose up -d --build
@@ -66,6 +68,10 @@ ERR|||Missing PID-3 PatientID
 
 The receiver logs only message metadata and the validation outcome. See the
 synthetic [example log](logs/example.log).
+
+See [incident and recovery records](docs/incident-recovery.md) for the
+symptom, root cause, test, remediation, and post-recovery verification of the
+rejection scenario.
 
 ## Test without Docker
 
