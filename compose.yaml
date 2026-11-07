@@ -1,0 +1,10 @@
+services:
+  hl7-receiver:
+    build: .
+    container_name: hl7-radiology-lab
+    ports:
+      - "2576:2575"
+    volumes:
+      - ./logs:/app/logs
+    command: ["python", "-m", "src.hl7_server", "--host", "0.0.0.0", "--port", "2575", "--log", "/app/logs/receiver.log"]
+
